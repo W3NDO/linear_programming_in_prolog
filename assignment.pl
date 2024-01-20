@@ -5,6 +5,8 @@
     TODO Build a smaller program to check results of deduction, reporting if there is a unique solution
 */
 
+:- use_module(parser, library(clpfd)).
+
 % front end: lpsolve/2 succeeds when its first
 % argument is a list of well formed sentences
 % and its second is a list of constrained variables
@@ -23,3 +25,4 @@ lpsolve( VariablesIn, VariablesOut ) -->
    lpsolve( VariablesBetween, VariablesOut ).
 
 look_up(A, B, C, D). %needed according to the docs.
+
